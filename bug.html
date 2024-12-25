@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error</title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <p>This is another paragraph.</p>
+  <div id="myDiv"></div>
+
+  <script>
+    // Incorrect way to access an element by ID
+    document.getElementById("myDiv").innerHTML = "<p>This is in the div.</p>";
+
+    // Correct way to access an element by ID
+    var myDiv = document.getElementById("myDiv");
+    if (myDiv) {
+      myDiv.innerHTML = "<p>This is in the div (corrected).</p>";
+    } else {
+      console.error("Element with id 'myDiv' not found.");
+    }
+  </script>
+</body>
+</html>
